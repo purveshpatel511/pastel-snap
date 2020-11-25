@@ -1,4 +1,4 @@
-# pastel
+# pastel v0.8.0
 
 [![Build Status](https://img.shields.io/github/workflow/status/sharkdp/pastel/CICD?style=flat-square)](https://github.com/sharkdp/pastel/actions)
 [![](https://img.shields.io/github/v/release/sharkdp/pastel?colorB=d7a400&style=flat-square)](https://github.com/sharkdp/pastel/releases)
