@@ -1,0 +1,19 @@
+name: pastel
+base: core18
+version: '0.8.0'
+summary: command-line tool to generate, analyze, convert and manipulate colors.
+description: |
+  pastel is a command-line tool to generate, analyze, convert and manipulate colors.
+  It supports many different color formats and color spaces like RGB (sRGB), HSL, CIELAB, CIELCh as well as ANSI 8-bit and 24-bit representations.
+
+grade: stable
+confinement: strict
+
+apps:
+  pastel:
+    command: pastel
+
+parts:
+  pastel:
+    plugin: rust
+    source: .
