@@ -1,0 +1,48 @@
+[package]
+authors = ["David Peter <mail@david-peter.de>"]
+categories = ["command-line-utilities"]
+description = "A command-line tool to generate, analyze, convert and manipulate colors"
+homepage = "https://github.com/sharkdp/pastel"
+license = "MIT/Apache-2.0"
+name = "pastel"
+readme = "README.md"
+repository = "https://github.com/sharkdp/pastel"
+version = "0.8.0"
+edition = "2018"
+build = "build.rs"
+exclude = ["doc/pastel.gif"]
+
+[dependencies]
+# library dependencies
+lazy_static = "1.3.0"
+rand = "0.7"
+atty = "0.2"
+output_vt100 = "0.1"
+nom = "5"
+
+# binary-only dependencies (see https://github.com/rust-lang/cargo/issues/1982)
+regex = "1"
+
+[dependencies.clap]
+version = "2"
+features = ["suggestions", "color", "wrap_help"]
+
+[build-dependencies]
+clap = "2"
+lazy_static = "1.3.0"
+output_vt100 = "0.1"
+
+[[bin]]
+name = "pastel"
+path = "src/cli/main.rs"
+
+
+[dev-dependencies]
+approx = "0.3"
+assert_cmd = "0.12.0"
+rand_xoshiro = "0.4.0"
+criterion = "0.3"
+
+[[bench]]
+name = "parse_color"
+harness = false
